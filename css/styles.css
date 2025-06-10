@@ -154,10 +154,9 @@ section.visible {
     left: -10%;
     height: 80%;
     width: 120%;
-    background-image: url(../Picture1.png);
+    background-image: url(../Picture1blurred.png);
     background-size: cover;
     background-position: center center;
-    filter: blur(4px);
     z-index: -2;
 }
 
