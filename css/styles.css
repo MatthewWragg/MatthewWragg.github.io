@@ -5,6 +5,7 @@
     --header-color: #2c3e50;
     --dark-color: #212121;
     --text-color: #2c3e50;
+    --button-color: #444444;
     --font-family: 'Manrope', sans-serif;
     --transition-speed: 0.3s;
     letter-spacing: -0.5px;
@@ -30,7 +31,7 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: 3rem 0;
 }
 
 h1, h2, h3 {
@@ -153,16 +154,16 @@ section.visible {
     text-align: left;
     padding-top: 100px; /* ADD THIS: Pushes content down below the header */
     box-sizing: border-box;
+    height: 450px;
     
 }
 
 .background {
     position: absolute;
     top: 100px;
-    left: -10%;
+    left: 0;
     height: 78%;
-    width: 120%;
-    background-image: url(../Picture1blurred2.png);
+    width: 100%;
     background-size: cover;
     background-position: center center;
     z-index: -2;
@@ -171,10 +172,10 @@ section.visible {
 .filter {
     position: absolute;
     top: 100px;
-    left: -10%;
-    width: 120%;
+    left: 0;
+    width: 100%;
     height: 78%;
-    background-color: rgba(94, 94, 94, 0.548);
+    background-color: rgba(94, 94, 94, 0.637);
     pointer-events: none;
     z-index: -1;
   }
@@ -182,7 +183,7 @@ section.visible {
 #hero .container {
     display: flex;
     max-width: 65%;
-    height: 60%;
+    height: 100%;
     justify-content: space-between;
     vertical-align: middle;
 }
@@ -190,13 +191,13 @@ section.visible {
 #hero h1 {
     font-size: 3rem;
     margin-bottom: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     line-height: 1.4;
 }
 
 #hero .subtitle {
     font-size: 1.7rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
@@ -212,11 +213,10 @@ section.visible {
 
 #hero .profilePhoto {
     display: flex;
-    width: 250px;
-    max-width: 250px;
-    max-height: 250px;
     vertical-align: middle;
     justify-content: center;
+    width: 250px;
+    height: 250px;
 }
 
 
@@ -237,11 +237,11 @@ section.visible {
     color: var(--header-color);
 }
 
-.research {
+.subheader {
     flex: 2;
 }
 
-.research h2 {
+.subheader h2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,11 +311,17 @@ section.visible {
 
 .project-info h3 {
     color: var(--accent-color);
+    height: 79.17px;
+}
+
+.project-info p {
+    height: 129.97px;
 }
 
 .project-links a {
     margin-right: 15px;
     font-weight: bold;
+    align-self: flex-end;
 }
 
 /* --- Contact Section --- */
@@ -383,16 +389,22 @@ textarea {
 
 /* --- Footer --- */
 .main-footer {
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
     text-align: center;
     padding: 2rem 0;
     color: var(--text-color);
 }
 
+.social-links {
+    margin-top: 10px;
+}
+
 .social-links a {
     margin: 0 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--header-color);
+    text-decoration-line: underline;
+    text-underline-offset: 6px;
 }
 
 

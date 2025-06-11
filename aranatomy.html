@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Professional Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/projectPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,200;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <img src="MW4.png" href="#hero" class="logo">
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Research</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="background" style="background-image: url(Picture1blurred2.png);"></div>
+                <div class="filter"></div>
+                <div class="mainTitle">
+                    <h1>Learning Anatomy with Tangible AR</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="paper">
+            <div class="subheader">
+                <div class="subsection">
+                    <h2>Paper</h2>
+                    <div class="underline">
+                        <hr>
+                    </div>
+                </div>
+                <div class="container" id="paper-container">
+                    <div class="paper-grid">
+                        <div class="overview">
+                            <h2>Investigating the Benefits of Physical Models for Anatomical Education in Augmented
+                                Reality</h2>
+                            <b>Matthew Wragg</b>, University of Bath<br>
+                            <b>Raj Sengupta</b>, Royal National Hospital for Rheumatic Diseases, Bath<br>
+                            <b>Dario Cazzola</b>, University of Bath<br>
+                            <b>Jason Alexander</b>, University of Bath<br><br>
+                            <p style="width: 75%"><i>Presented at CHI 2025: Proceedings of the 2025 CHI Conference on
+                                    Human Factors in Computing Systems</i></p>
+                            <div class="buttons">
+                                <div class="button-div">
+                                    <button class="pdfButton">PDF</button>
+                                </div>
+                                <div class="button-div">
+                                    <button class="pdfButton">DOI</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abstract">
+                            <h3><b>Abstract</b></h3>
+                            Historically, anatomical education has utilised physical models; researchers are now looking
+                            to Augmented Reality (AR) to deliver more engaging learning experiences. While there are
+                            clear educational advantages to AR, most systems lack the cognitive benefits afforded by
+                            physical models. Our work explores the potential of combining physical anatomical models and
+                            AR. We first present a design space exploring the interplay between the two. From this, we
+                            created a tangible AR system utilising a physical vertebrae model for learning spinal
+                            anatomy and axial spondyloarthritis progression. We conducted a study (n=39) to evaluate its
+                            benefits for knowledge improvement and retention, compared with a virtual AR and
+                            screen-based version. We found no difference in learning outcomes, however, the physical
+                            model improved participants' learning experience. We then conducted an expert evaluation
+                            with clinicians to explore opportunities for using tangible AR in clinical practice. Results
+                            highlight potential benefits for patient understanding, and challenges surrounding
+                            accessibility.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="subheader">
+                <div class="subsection">
+                    <h2>Gallery</h2>
+                    <div class="underline">
+                        <hr>
+                    </div>
+                </div>
+                <div class="container" id="gallery-container">
+                    <div class="gallery-grid">
+                        <!-- Gallery Item 1: Regular height -->
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="PhysicalSpineFigureCropped.png" alt="" class="gallery-image">
+                        </div>
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="IMG_1553.jpg" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 2: Taller height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-full-width">
+                            <img src="VirtualSpines.png" alt="" class="gallery-image-scaled">
+                        </div>
+
+                        <!-- Gallery Item 3: Regular height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="IMG_1552 - Copy.jpg" alt="" class="gallery-image">
+                        </div>                        
+
+                        <!-- Gallery Item 5: Regular height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="Picture3.png" alt="" class="gallery-image">
+                        </div>
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="1746280552753.jpg" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 6: Wider item (spans 2 columns) -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="Picture5.png" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 7: Taller height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="Spine1.png" alt="" class="gallery-image">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img src="MW4.png" href="#hero" class="logo">
+            <div class="social-links">
+                <!-- Replace # with your actual social media links -->
+                <a href="#" aria-label="Github Profile">LinkedIn</a>
+                <a href="#" aria-label="LinkedIn Profile">Bluesky</a>
+                <a href="#" aria-label="Twitter Profile">ORCID</a>
+            </div>
+            <p><br>&copy; 2025 Matthew Wragg.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">&uarr;</button>
+</body>
+
+</html>

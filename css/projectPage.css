@@ -1,0 +1,146 @@
+#hero .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+    line-height: 1.4;
+    text-align: center;
+}
+
+
+#hero .mainTitle {
+    width: 100%;
+}
+
+.paper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.overview {
+    padding: 10px;
+    padding-right: 50px;
+}
+
+.abstract {
+    padding: 10px;
+    padding-right: 50px;
+}
+
+.pdfButton {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: none;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.button-div {
+    padding-right: 10px;
+}
+
+#paper {
+    background-color: var(--primary-color);
+    padding-top: 5rem;
+}
+
+#paper-container {
+    width: 70%;
+}
+
+#gallery {
+    background-color: var(--primary-color);
+    padding-top: 5rem;
+}
+
+#gallery-container {
+    width: 90%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Responsive columns */
+    grid-auto-rows: minmax(150px, auto);
+    /* Base row height, but allow auto for content */
+    gap: 2rem;
+    /* Gap between grid items */
+    grid-auto-flow: dense;
+    /* NEW: Helps fill empty spaces with later items */
+}
+
+/* Responsive adjustments for columns */
+        @media (max-width: 1024px) { /* For tablets and smaller */
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) { /* For mobile phones */
+            .gallery-grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 column on extra small screens */
+            }
+        }
+
+/* Define different row spans for a varied height effect */
+.grid-item-tall {
+    grid-row: span 2;
+    /* Make this item span 2 rows */
+}
+
+.grid-item-medium {
+    grid-row: span 1;
+    /* Default, explicit for clarity */
+}
+
+.grid-item-wider {
+    grid-column: span 2;
+    /* Make this item span 2 columns */
+}
+
+.grid-item-extra-tall {
+    grid-row: span 3;
+    /* Make this item span 3 rows */
+}
+
+.grid-item-full-width {
+    grid-row: span 1;
+    grid-column: span 2;
+}
+
+/* Ensure images fill their container and maintain aspect ratio */
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cover the area, cropping if necessary */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+}
+
+.gallery-image-scaled {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    /* Cover the area, cropping if necessary */
+    border-radius: 0.5rem;
+    /* rounded-lg */
+}
