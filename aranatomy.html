@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,200;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
     <script src="index.js"></script>
+    <script src="projectPage.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
     <!-- Header & Navigation -->
     <header class="main-header">
         <div class="container">
-            <img src="MW4.png" href="#hero" class="logo">
+            <img src="./images/MW4.png" href="#hero" class="logo">
             <button class="menu-toggle" id="menuToggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -40,7 +41,7 @@
         <!-- Hero Section -->
         <section id="hero">
             <div class="container">
-                <div class="background" style="background-image: url(Picture1blurred2.png);"></div>
+                <div class="background" style="background-image: url(images/Picture1blurred2.png);"></div>
                 <div class="filter"></div>
                 <div class="mainTitle">
                     <h1>Learning Anatomy with Tangible AR</h1>
@@ -111,59 +112,63 @@
 
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="PhysicalSpineFigureCropped.png" alt="" class="gallery-image">
+                            <img src="./images/PhysicalSpineFigureCropped.png" alt="" class="gallery-image">
                         </div>
 
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="IMG_1553.jpg" alt="" class="gallery-image">
+                            <img src="./images/IMG_1553.jpg" alt="" class="gallery-image">
                         </div>
 
                         <!-- Gallery Item 2: Taller height -->
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-full-width">
-                            <img src="VirtualSpines.png" alt="" class="gallery-image-scaled">
+                            <img src="./images/VirtualSpines.png" alt="" class="gallery-image gallery-image-scaled">
                         </div>
 
                         <!-- Gallery Item 3: Regular height -->
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="IMG_1552 - Copy.jpg" alt="" class="gallery-image">
-                        </div>                        
+                            <img src="./images/IMG_1552 - Copy.jpg" alt="" class="gallery-image">
+                        </div>
 
                         <!-- Gallery Item 5: Regular height -->
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="Picture3.png" alt="" class="gallery-image">
+                            <img src="./images/Picture3.png" alt="" class="gallery-image">
                         </div>
 
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="1746280552753.jpg" alt="" class="gallery-image">
+                            <img src="./images/1746280552753.jpg" alt="" class="gallery-image">
                         </div>
 
                         <!-- Gallery Item 6: Wider item (spans 2 columns) -->
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="Picture5.png" alt="" class="gallery-image">
+                            <img src="./images/Picture5.png" alt="" class="gallery-image">
                         </div>
 
                         <!-- Gallery Item 7: Taller height -->
                         <div
                             class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
-                            <img src="Spine1.png" alt="" class="gallery-image">
+                            <img src="./images/Spine1.png" alt="" class="gallery-image">
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </section>
 
+        <div id="imageViewerOverlay" class="image-viewer-overlay">
+            <img id="viewerImage" class="image-viewer-content" src="">
+        </div>
+
     </main>
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <img src="MW4.png" href="#hero" class="logo">
+            <img src="./images/MW4.png" href="#hero" class="logo">
             <div class="social-links">
                 <!-- Replace # with your actual social media links -->
                 <a href="#" aria-label="Github Profile">LinkedIn</a>
