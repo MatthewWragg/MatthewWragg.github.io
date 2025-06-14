@@ -1,0 +1,204 @@
+#hero {
+    display: flex;
+    align-items: center; /* Vertically centers the container within #hero */
+    justify-content: center; /* Horizontally centers the container within #hero */
+    text-align: left; /* Default text alignment for children */
+    
+    /* Use padding-top to push hero content below the fixed header */
+    padding-top: 100px; 
+    
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    height: auto; /* Allow height to adjust dynamically based on content */
+    min-height: calc(100vh - 100px); /* Ensure #hero section fills viewport height below header */
+    
+    position: relative; /* Context for absolute background/filter */
+    overflow: hidden; /* Important for background to not spill out */
+}
+
+.background {
+    position: absolute;
+    top: 0; /* Start position relative to #hero, accounting for its padding-top */
+    left: 0;
+    width: 100%;
+    bottom: 100px; /* End position relative to #hero, accounting for its padding-bottom */
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    max-height: 100%;;
+    z-index: -2;
+}
+
+.filter {
+    position: absolute;
+    top: 0; /* Start position relative to #hero, accounting for its padding-top */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 50px; /* End position relative to #hero, accounting for its padding-bottom */
+    background-color: rgba(65, 65, 65, 0.74);
+    pointer-events: none;
+    max-height: 100%;;
+    z-index: -1;
+}
+
+#hero .container {
+    display: flex;
+    max-width: 90%; /* Increased max-width for better use of space */
+    width: 100%; /* Ensure it takes full width within max-width */
+    min-height: calc(100vh - 100px - 100px); /* Adjust min-height to account for #hero's padding-top (100px) and padding-bottom (100px), plus the 100px header height from viewport calculation */
+    padding: 0 20px; /* Consistent horizontal padding, internal padding of container */
+    margin: 0 auto; /* Center the container horizontally within #hero */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Vertically align items */
+    gap: 80px; /* Space between text and image */
+    z-index: 1; /* Ensure content is above background/filter */
+}
+
+#hero h1 {
+    font-size: 2rem; /* Adjusted for larger screens */
+    color: var(--primary-color);
+    line-height: 1.4;
+    width: 100%; /* Take full width within its flex item */
+    text-align: left; /* Default text alignment */
+
+}
+
+#hero .subtitle {
+    font-size: 1.2rem; /* Adjusted for larger screens */
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 1.4;
+    width: 100%; /* Take full width within its flex item */
+    text-align: left; /* Default text alignment */
+
+}
+
+#hero .mainTitle {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allows the text section to grow/shrink */
+    justify-content: center;
+    min-width: 0; /* Ensures content can shrink */
+}
+
+#hero .aboutPhoto {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Take full width of its parent div */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Adjusted max-width for better control */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add a subtle shadow */
+}
+
+#hero .aboutPhotoDiv {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Set a fixed width for the photo container */
+    flex-shrink: 0; /* Prevent the photo from shrinking unnecessarily */
+    justify-content: center;
+    align-items: center; /* Center the image within its div */
+}
+
+@media (max-width: 1300px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+    #hero .subtitle {
+        font-size: 1.1rem;
+    }
+    #hero .aboutPhotoDiv {
+        width: 250px;
+    }
+    #hero .aboutPhoto {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+    #hero .subtitle {
+        font-size: 1rem;
+    }
+    #hero .aboutPhotoDiv {
+        width: 200px;
+    }
+    #hero .aboutPhoto {
+        max-width: 200px;
+    }
+}
+
+
+@media (max-width: 816px) {
+    #hero h1 {
+        font-size: 1.62rem;
+    }
+    #hero .subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        padding-top: 100px; /* Ensure hero section still clears header */
+    }
+
+    #hero .container {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center; /* Center align text for the container */
+        max-width: 90%; /* More generous width on smaller screens */
+        padding: 20px; /* All-round padding for container content */
+        justify-content: flex-start; /* Align content to top of container when stacked */
+        align-items: center; /* Center items horizontally when stacked */
+        min-height: auto; /* Allow height to shrink on smaller screens when content stacks */
+        gap: 0;
+    }
+
+    #hero .mainTitle {
+        width: 100%; /* Take full width */
+        margin-bottom: 0; /* Space between text and image */
+        text-align: center; /* Ensure text is centered within mainTitle */
+    }
+
+    #hero h1 {
+        font-size: 1.62rem; /* Keep a decent size for mobile */
+        text-align: center;
+    }
+    #hero .subtitle {
+        font-size: 0.85rem; /* Adjust subtitle size for readability */
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    #hero .aboutPhotoDiv {
+        width: 180px; /* Smaller photo container */
+        height: 180px; /* Maintain square shape */
+        margin-top: 0px; /* Space above the photo */
+        margin-bottom: 0;
+    }
+
+    #hero .aboutPhoto {
+        max-width: 180px; /* Match container size */
+        height: 180px;
+        margin: 0 auto; /* Center image */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.62rem;
+    }
+    #hero .subtitle {
+        font-size: 0.85rem;
+    }
+    #hero .aboutPhotoDiv {
+        width: 150px;
+        height: 150px;
+    }
+    #hero .aboutPhoto {
+        max-width: 150px;
+        height: 150px;
+    }
+}

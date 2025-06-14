@@ -1,6 +1,6 @@
 :root {
-    --primary-color:  #ffffff;
-    --secondary-color:  #f1f1f1;
+    --primary-color: #ffffff;
+    --secondary-color: #f1f1f1;
     --accent-color: #3498db;
     --header-color: #2c3e50;
     --dark-color: #212121;
@@ -31,19 +31,29 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 3rem 20px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     color: var(--header-color);
     line-height: 1.1;
     margin-bottom: 1rem;
     font-weight: 400;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2.2rem;}
-h3 { font-size: 1.5rem; }
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 .subsection {
     display: flex;
@@ -52,10 +62,12 @@ h3 { font-size: 1.5rem; }
 }
 
 .underline {
-    width: 5%;
+    width: 80px;
 }
 
-p { margin-bottom: 1rem; }
+p {
+    margin-bottom: 1rem;
+}
 
 a {
     text-decoration: none;
@@ -102,6 +114,7 @@ section.visible {
 .main-nav ul {
     display: flex;
     list-style: none;
+    background-color: var(--primary-color);
 }
 
 .main-nav ul li {
@@ -136,6 +149,7 @@ section.visible {
     cursor: pointer;
     background: none;
     border: none;
+    vertical-align: middle;
 }
 
 .menu-toggle .bar {
@@ -150,74 +164,129 @@ section.visible {
 /* --- Hero Section --- */
 #hero {
     display: flex;
-    align-items: center; /* Vertically centers the content */
+    align-items: center;
+    /* Vertically centers the container within #hero */
+    justify-content: center;
+    /* Horizontally centers the container within #hero */
     text-align: left;
-    padding-top: 100px; /* ADD THIS: Pushes content down below the header */
+    /* Default text alignment for children */
+
+    /* Use padding-top to push hero content below the fixed header */
+    padding-top: 100px;
+
     box-sizing: border-box;
-    height: 450px;
-    
+    /* Include padding in element's total width and height */
+    height: auto;
+    /* Allow height to adjust dynamically based on content */
+    min-height: calc(60vh - 100px);
+    /* Ensure #hero section fills viewport height below header */
+
+    position: relative;
+    /* Context for absolute background/filter */
+    overflow: hidden;
+    /* Important for background to not spill out */
 }
 
 .background {
     position: absolute;
-    top: 100px;
+    top: 0;
+    /* Start position relative to #hero, accounting for its padding-top */
     left: 0;
-    height: 78%;
     width: 100%;
+    bottom: 100px;
+    /* End position relative to #hero, accounting for its padding-bottom */
+    height: 100%;
     background-size: cover;
     background-position: center center;
+    max-height: 100%;
+    ;
     z-index: -2;
 }
 
 .filter {
     position: absolute;
-    top: 100px;
+    top: 0;
+    /* Start position relative to #hero, accounting for its padding-top */
     left: 0;
     width: 100%;
-    height: 78%;
-    background-color: rgba(94, 94, 94, 0.637);
+    height: 100%;
+    bottom: 50px;
+    /* End position relative to #hero, accounting for its padding-bottom */
+    background-color: rgba(65, 65, 65, 0.74);
     pointer-events: none;
+    max-height: 100%;
+    ;
     z-index: -1;
-  }
+}
 
 #hero .container {
     display: flex;
-    max-width: 65%;
-    height: 100%;
-    justify-content: space-between;
-    vertical-align: middle;
+    max-width: 80%;
+    /* Increased max-width for better use of space */
+    width: 100%;
+    /* Ensure it takes full width within max-width */
+    min-height: calc(60vh - 100px - 100px);
+    /* Adjust min-height to account for #hero's padding-top (100px) and padding-bottom (100px), plus the 100px header height from viewport calculation */
+    padding: 0 20px;
+    /* Consistent horizontal padding, internal padding of container */
+    margin: 0 auto;
+    /* Center the container horizontally within #hero */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Vertically align items */
+    gap: 30px;
+    /* Space between text and image */
+    z-index: 1;
+    /* Ensure content is above background/filter */
 }
 
 #hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1.2rem;
+    font-size: 2.8rem;
+    /* Adjusted for larger screens */
     color: var(--primary-color);
     line-height: 1.4;
+    width: 100%;
+    /* Take full width within its flex item */
+    text-align: left;
+    /* Default text alignment */
+
 }
 
 #hero .subtitle {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+    /* Adjusted for larger screens */
     color: var(--primary-color);
-    margin-bottom: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
+    width: 100%;
+    /* Take full width within its flex item */
+    text-align: left;
+    /* Default text alignment */
+
 }
 
 #hero .mainTitle {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    vertical-align: middle;
+    flex: 1;
+    /* Allows the text section to grow/shrink */
     justify-content: center;
+    min-width: 0;
+    /* Ensures content can shrink */
 }
 
 #hero .profilePhoto {
     display: flex;
-    vertical-align: middle;
     justify-content: center;
-    width: 250px;
-    height: 250px;
+    height: 30%;
+    width: 30%;
+    max-width: 300px;
+    /* Adjusted max-width for better control */
+    object-fit: cover;
+    /* Ensures image covers the area without distortion */
 }
+
 
 
 .cta-button {
@@ -280,22 +349,24 @@ section.visible {
     background-color: var(--primary-color);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .project-image {
-     height: 400px;
-     background-color: var(--primary-color);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     color: var(--text-color);
+    height: 400px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
 }
 
 .project-image img {
@@ -307,15 +378,27 @@ section.visible {
 
 .project-info {
     padding: 1.5rem;
+    display: flex;
+    /* Make project-info a flex container */
+    flex-direction: column;
+    /* Stack its children vertically */
+    flex-grow: 1;
+    /* Allow project-info to take up all available vertical space */
+
 }
 
 .project-info h3 {
     color: var(--accent-color);
-    height: 79.17px;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
 
 .project-info p {
-    height: 129.97px;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    /* Min 0.85rem, scales with 1.5% of viewport width, Max 1rem */
+    flex-grow: 1;
+    /* Allow p to grow and push project-links down */
+    margin-bottom: 1rem;
+    /* Add some margin below paragraph */
 }
 
 .project-links a {
@@ -423,7 +506,7 @@ textarea {
     display: none;
     opacity: 0;
     transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 #scrollTopBtn.visible {
@@ -437,58 +520,166 @@ textarea {
 }
 
 /* --- Responsive Design --- */
+
+@media (max-width: 1024px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero .subtitle {
+        font-size: 1.4rem;
+    }
+}
+
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 1.8rem; }
+    #hero .container {
+        flex-direction: column;
+        /* Stack elements vertically */
+        text-align: center;
+        /* Center text elements */
+        max-width: 80%;
+        /* Increase max-width to use more space */
+        padding: 20px;
+        /* Add more padding */
+        height: auto;
+        /* Allow container height to adjust */
+        gap: 0px;
+    }
+
+    #hero .mainTitle {
+        width: 100%;
+        /* Take full width */
+
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        text-align: center;
+        /* Center align title */
+    }
+
+    #hero .subtitle {
+        font-size: 1.1rem;
+        text-align: center;
+        /* Center align subtitle */
+        margin-bottom: 1rem;
+        /* Reduce bottom margin */
+    }
+
+    #hero .profilePhoto {
+        width: 150px;
+        /* Further reduce size */
+        height: 150px;
+        margin: 0 auto;
+        /* Center the image */
+    }
+
+    /* Existing mobile nav styles */
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+    }
 
     .main-header .container {
         flex-direction: column;
         align-items: flex-start;
+        justify-content: space-between;
+
     }
 
     .main-nav {
         width: 100%;
-        margin-top: 1rem;
-        display: none; /* Hide by default on mobile */
+        /* Take full width */
+        margin-top: 0;
+        /* Changed from 1rem to 0 */
+        display: none;
+        /* Hide by default on mobile */
+        position: absolute;
+        /* Position menu relative to header */
+        top: 100px;
+        /* Below the header */
+        left: 0;
+        background-color: var(--primary-color);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 10px 10px;
+        padding: 10px 0;
+        /* Vertical padding for the menu block */
+        z-index: 999;
+        /* Ensure it's above other content but below header */
+        /* Added transition for smoother open/close */
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-out;
     }
 
     .main-nav.active {
-        display: block; /* Show when active */
+        display: block;
+        /* Show when active */
+        transform: translateY(0%);
+        /* Slide down */
     }
 
     .main-nav ul {
         flex-direction: column;
         width: 100%;
+        padding: 0;
+        /* Remove default padding for ul */
     }
 
     .main-nav ul li {
-        margin: 10px 0;
+        margin: 0;
+        /* Remove horizontal margin */
+        padding: 10px 0;
+        /* Consistent padding for list items */
         text-align: center;
+        border-bottom: 1px solid var(--secondary-color);
+        /* Separator */
     }
+
+    .main-nav ul li:last-child {
+        border-bottom: none;
+        /* No border on last item */
+    }
+
+    .main-nav ul li a {
+        display: block;
+        /* Make the whole list item clickable */
+        padding: 10px 20px;
+        /* Padding for the clickable area */
+        color: var(--header-color);
+        font-size: 1.1rem;
+        /* Slightly larger font for mobile links */
+    }
+
+    .main-nav ul li a::after {
+        content: none;
+        /* Remove underline animation on mobile */
+    }
+
+    .main-nav ul li a.active {
+        color: var(--accent-color);
+        /* Highlight active link */
+        font-weight: bold;
+    }
+
 
     .menu-toggle {
         display: block;
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 33px;
+        right: 40px;
     }
 
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
+
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
+
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-}
-
-@media (max-width: 480px) {
-     #hero h1 {
-        font-size: 2rem;
-     }
-     #hero .subtitle {
-        font-size: 1.2rem;
-     }
 }
