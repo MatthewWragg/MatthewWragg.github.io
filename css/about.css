@@ -9,7 +9,7 @@
     
     box-sizing: border-box; /* Include padding in element's total width and height */
     height: auto; /* Allow height to adjust dynamically based on content */
-    min-height: calc(100vh - 100px); /* Ensure #hero section fills viewport height below header */
+    min-height: calc(80vh - 100px); /* Ensure #hero section fills viewport height below header */
     
     position: relative; /* Context for absolute background/filter */
     overflow: hidden; /* Important for background to not spill out */
@@ -35,7 +35,7 @@
     width: 100%;
     height: 100%;
     bottom: 50px; /* End position relative to #hero, accounting for its padding-bottom */
-    background-color: rgba(65, 65, 65, 0.74);
+    background-color: rgba(51, 51, 51, 0.705);
     pointer-events: none;
     max-height: 100%;;
     z-index: -1;
@@ -45,7 +45,7 @@
     display: flex;
     max-width: 90%; /* Increased max-width for better use of space */
     width: 100%; /* Ensure it takes full width within max-width */
-    min-height: calc(100vh - 100px - 100px); /* Adjust min-height to account for #hero's padding-top (100px) and padding-bottom (100px), plus the 100px header height from viewport calculation */
+    min-height: calc(80vh - 100px - 100px); /* Adjust min-height to account for #hero's padding-top (100px) and padding-bottom (100px), plus the 100px header height from viewport calculation */
     padding: 0 20px; /* Consistent horizontal padding, internal padding of container */
     margin: 0 auto; /* Center the container horizontally within #hero */
     justify-content: center; /* Center horizontally */
@@ -69,6 +69,8 @@
     font-weight: 500;
     line-height: 1.4;
     width: 100%; /* Take full width within its flex item */
+    padding-right: 10px;
+
     text-align: left; /* Default text alignment */
 
 }
@@ -170,6 +172,8 @@
         font-size: 0.85rem; /* Adjust subtitle size for readability */
         text-align: center;
         margin-bottom: 1rem;
+        padding-right: 0px;
+
     }
 
     #hero .aboutPhotoDiv {
