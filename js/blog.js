@@ -158,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
         listView.style.display = 'none';
         postView.style.display = 'block';
         window.scrollTo(0, 0);
+
+        // Push state to browser history when a post is viewed
+        history.pushState({ view: 'post', postId: postId }, '', `#post-${postId}`);
     };
 
     /**
@@ -168,6 +171,12 @@ document.addEventListener('DOMContentLoaded', () => {
         postView.style.display = 'none';
         updateAndRenderPosts();
         window.scrollTo(0, 0);
+
+        if (history.state && history.state.view === 'post') {
+             history.replaceState({ view: 'list' }, '', window.location.pathname);
+        } else if (!history.state || history.state.view !== 'list') {
+             history.pushState({ view: 'list' }, '', window.location.pathname);
+        }
     };
 
     // --- Event Listeners ---
@@ -188,7 +197,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     [...backButtons].forEach(button => {button.addEventListener('click', showListView)});
 
+    window.addEventListener('popstate', (event) => {
+        // Check if the state exists and if the view should be 'list'
+        if (event.state && event.state.view === 'list') {
+            showListView();
+        } else if (event.state && event.state.view === 'post' && event.state.postId) {
+            // If the user navigates directly to a #post-ID URL or uses forward button
+            showPostView(event.state.postId);
+        } else {
+            // Default to list view if no specific state or initial load
+            showListView();
+        }
+    });
+
     // --- Initial Setup ---
-    populateCategories();
-    updateAndRenderPosts();
+    // Handle initial page load based on URL hash or default to list view
+    if (window.location.hash.startsWith('#post-')) {
+        const postId = parseInt(window.location.hash.substring(6)); // Extract ID from #post-ID
+        if (!isNaN(postId)) {
+            // Ensure postsData is available before showing the post
+            // You might need a more robust loading mechanism if postsData is fetched async
+            // For now, assume it's loaded from posts.js
+            updateAndRenderPosts(); // Render posts first to ensure data is ready
+            showPostView(postId);
+        } else {
+            populateCategories();
+            updateAndRenderPosts();
+        }
+    } else {
+        // Initial load for list view, push a list state
+        populateCategories();
+        updateAndRenderPosts();
+        // Only push if it's not already the first entry or a different view
+        if (history.state === null || history.state.view !== 'list') {
+            history.replaceState({ view: 'list' }, '', window.location.pathname);
+        }
+    }
 });
