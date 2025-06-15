@@ -80,14 +80,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Existing Mobile Menu Toggle Logic (from index.js, but kept here for self-contained example) ---
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
-    }
+    
 });
