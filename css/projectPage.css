@@ -152,19 +152,20 @@
     /* rounded-lg */
 }
 
+/* --- Image Viewer Overlay Styles --- */
 .image-viewer-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Darker overlay for focus */
     display: flex;
+    /* Use flex to center content */
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    /* Ensure it's on top of other content */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -177,10 +178,136 @@
 
 .image-viewer-content {
     max-width: 90%;
-    max-height: 90%;
-    max-width: 1200px;
-    max-height: 900px;
+    max-height: 90vh;
+    /* Use viewport height for better responsiveness */
     border-radius: 0.5rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    /* Stronger shadow for pop-out effect */
     object-fit: contain;
+    /* Ensure image fits within bounds without cropping */
+    display: block;
+    /* Important for proper centering and sizing */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    /* Moved further to the left from the right edge */
+    color: #fff;
+    /* White color for contrast */
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    /* Above image and navigation buttons */
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #bbb;
+}
+
+/* Navigation Buttons (Prev/Next) */
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Vertically center */
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    /* Larger arrows */
+    transition: 0.3s ease;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    border-radius: 50%;
+    /* Make them round */
+    width: 50px;
+    /* Fixed width */
+    height: 50px;
+    /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+    /* Slight scale on hover */
+}
+
+/* Responsive adjustments for gallery navigation buttons and close button */
+@media (max-width: 768px) {
+
+    .prev-btn,
+    .next-btn {
+        font-size: 20px;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    .close-btn {
+        font-size: 30px;
+        top: 10px;
+        right: 20px;
+        /* Adjusted to move further left */
+    }
+
+    .image-viewer-content {
+        max-width: 95%;
+        /* Give more space on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .prev-btn,
+    .next-btn {
+        font-size: 18px;
+        padding: 8px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .prev-btn {
+        left: 5px;
+    }
+
+    .next-btn {
+        right: 5px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        top: 5px;
+        right: 10px;
+        /* Adjusted to move further left */
+    }
 }
