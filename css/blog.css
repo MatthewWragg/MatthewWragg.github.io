@@ -266,7 +266,7 @@
 }
 
 #General {
-    background-color: #3498db;
+    background-color: var(--accent-color);
 }
 
 #axSpA {

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const postsGrid = document.getElementById('posts-grid');
     const postHeader = document.getElementById('post-header');
     const postBody = document.getElementById('post-body');
-    const backButton = document.getElementById('back-button');
+    const backButtons = document.getElementsByClassName('back-button');
     const searchInput = document.getElementById('search-input');
     const sortSelect = document.getElementById('sort-select');
     const categoryFilter = document.getElementById('category-filter');
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAndRenderPosts();
     });
 
-    backButton.addEventListener('click', showListView);
+    [...backButtons].forEach(button => {button.addEventListener('click', showListView)});
 
     // --- Initial Setup ---
     populateCategories();
