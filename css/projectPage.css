@@ -63,7 +63,7 @@
 }
 
 #paper-container {
-    width: 90%;
+    width: 100%;
 }
 
 #gallery {
@@ -85,6 +85,7 @@
     /* Gap between grid items */
     grid-auto-flow: dense;
     /* NEW: Helps fill empty spaces with later items */
+    justify-items: center;
 }
 
 /* Responsive adjustments for columns */
