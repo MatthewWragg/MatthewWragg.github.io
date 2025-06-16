@@ -35,7 +35,7 @@
     width: 100%;
     height: 100%;
     bottom: 50px; /* End position relative to #hero, accounting for its padding-bottom */
-    background-color: rgba(51, 51, 51, 0.705);
+    background-color: rgba(51, 51, 51, 0.815);
     pointer-events: none;
     max-height: 100%;;
     z-index: -1;
@@ -132,7 +132,6 @@
     }
 }
 
-
 @media (max-width: 816px) {
     #hero h1 {
         font-size: 1.62rem;
@@ -190,6 +189,97 @@
     }
 }
 
+#grid-section {
+    background-color: var(--primary-color); /* Or primary, depending on desired contrast */
+    padding: 5rem 20px; /* Consistent padding */
+    text-align: center; /* Center the heading */
+}
+
+#grid-section .subsection {
+    margin-bottom: 3rem; /* Space below heading and underline */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default to single column for mobile */
+    gap: 5rem; /* Space between grid items */
+    width: 90%; /* Max width for the grid */
+    margin: 0 auto; /* Center the grid */
+    margin-top: 3rem;
+}
+
+.grid-item {
+    background-color: var(--primary-color); /* Background for each card */
+    border-radius: 10px;
+    display: flex; /* Use flexbox for logo and text inside */
+    padding: 20px;
+    align-items: center; /* Vertically align items in the middle */
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item .logo-section {
+    width: 30%;
+    height: 100%;
+    flex-shrink: 0; /* Prevent it from shrinking */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.grid-item .logo {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.grid-item .text-content {
+    width: 70%;
+    text-align: left; /* Align text left within its section */
+    align-self: start;
+}
+
+.grid-item .text-content h3 {
+    font-size: 1.2rem;
+    color: var(--header-color);
+    margin-bottom: 0.5rem;
+}
+
+.grid-item .text-content p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 0; /* Remove default paragraph margin */
+}
+
+.grid-item .text-content .role {
+    font-weight: 700;
+}
+
+.grid-item .text-content .org {
+    margin-bottom: 20px;
+}
+
+.grid-item .text-content .dates {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* Default to single column for mobile */
+    }
+}
+
 @media (max-width: 480px) {
     #hero h1 {
         font-size: 1.62rem;
@@ -204,5 +294,21 @@
     #hero .aboutPhoto {
         max-width: 150px;
         height: 150px;
+    }
+
+    .grid-item {
+        flex-direction: column; /* Stack logo and text vertically */
+        text-align: center;
+    }
+    .grid-item .logo-section {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px; /* Space between logo and text */
+    }
+    .grid-item .text-content {
+        width: 100%;
+    }
+    .grid-item .logo-placeholder {
+        margin: 0 auto; /* Center logo when stacked */
     }
 }
