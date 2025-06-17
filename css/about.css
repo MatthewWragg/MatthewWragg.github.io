@@ -55,7 +55,7 @@
 }
 
 #hero h1 {
-    font-size: 2rem; /* Adjusted for larger screens */
+    font-size: 2.1rem; /* Adjusted for larger screens */
     color: var(--primary-color);
     line-height: 1.4;
     width: 100%; /* Take full width within its flex item */
