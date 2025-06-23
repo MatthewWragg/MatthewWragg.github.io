@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Wragg</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/projectPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/MW4icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,200;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="js/index.js"></script>
+    <script src="js/projectPage.js"></script>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html"><img src="./images/MW4.png" href="#hero" class="logo"></a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Research</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="background" style="background-image: url(images/TabletopFigureWithAR.jpg);"></div>
+                <div class="filter"></div>
+                <div class="mainTitle">
+                    <h1>Physical Objects for Collaboration in AR</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="paper">
+            <div class="subheader">
+                <div class="subsection">
+                    <h2>Paper</h2>
+                    <div class="underline">
+                        <hr>
+                    </div>
+                </div>
+                <div class="container" id="paper-container">
+                    <div class="paper-grid">
+                        <div class="overview">
+                            <h2>Investigating the Use of Physical Objects for Collaborative Data Visualisation and Exploration in Augmented Reality</h2>
+                            <b>Matthew Wragg</b>, University of Bath<br>
+                            <b>Kim Sauvé</b>, University of Bath<br>
+                            <b>Dario Cazzola</b>, University of Bath<br>
+                            <b>Jason Alexander</b>, University of Bath<br><br>
+                            <p style="width: 75%"><i>Paper currently under review.</i></p>
+                            <div class="buttons">
+                                <div class="button-div">
+                                    <button class="pdfButton">PDF</button>
+                                </div>
+                                <div class="button-div">
+                                    <button class="pdfButton">DOI</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abstract">
+                            <h3><b>Abstract</b></h3>
+                            <i>Coming soon</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="subheader">
+                <div class="subsection">
+                    <h2>Gallery</h2>
+                    <div class="underline">
+                        <hr>
+                    </div>
+                </div>
+                <div class="container" id="gallery-container">
+                    <div class="gallery-grid">
+                        
+                        <!-- Gallery Item 2: Taller height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/TabletopFigureWithAR.jpg" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 3: Regular height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-full-width">
+                            <img src="./images/handheld.png" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 5: Regular height -->
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/ph2.png" alt="" class="gallery-image">
+                        </div>
+                        
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/virtual2.png" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 6: Wider item (spans 2 columns) -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/Image (5).jpeg" alt="" class="gallery-image">
+                        </div>
+
+                        <!-- Gallery Item 7: Taller height -->
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/Image (4).jpeg" alt="" class="gallery-image">
+                        </div>
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/controls.png" alt="" class="gallery-image">
+                        </div>
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-medium">
+                            <img src="./images/legend.png" alt="" class="gallery-image">
+                        </div>
+
+                        <div
+                            class="rounded-lg shadow-lg overflow-hidden bg-white hover:shadow-xl transition-shadow duration-300 grid-item-full-width">
+                            <img src="./images/IMG_1552.jpg" alt="" class="gallery-image">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="imageViewerOverlay" class="image-viewer-overlay">
+            <img id="viewerImage" class="image-viewer-content" src="">
+            <a class="prev-btn" title="Previous Image">&#10094;</a> <!-- Left arrow -->
+            <a class="next-btn" title="Next Image">&#10095;</a> <!-- Right arrow -->
+            <span class="close-btn">&times;</span> <!-- Close button -->
+
+        </div>
+
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <img src="./images/MW4.png" href="#hero" class="logo">
+            <div class="social-links">
+                <!-- Replace # with your actual social media links -->
+                <a href="https://www.linkedin.com/in/matthew-wragg-hci/" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://bsky.app/profile/mattwragg.bsky.social" aria-label="Bluesky Profile">Bluesky</a>
+                <a href="https://orcid.org/0000-0002-1343-1454" aria-label="ORCID Profile">ORCID</a>
+            </div>
+            <p><br>&copy; 2025 Matthew Wragg.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top">&uarr;</button>
+</body>
+
+</html>
