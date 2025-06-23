@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matt Wragg</title>
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/projectPage.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" href="images/MW4icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,200;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-<script src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/projectPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/MW4icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,200;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="js/index.js"></script>
+    <script src="js/projectPage.js"></script>
 </head>
-<body>
 
+<body>
     <header class="main-header">
         <div class="container">
             <a href="index.html"><img src="./images/MW4.png" href="#hero" class="logo"></a>
@@ -25,7 +29,7 @@
             <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="index.html">Research</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
@@ -35,29 +39,46 @@
     <main>
         <section id="hero">
             <div class="container">
-                <div class="background" style="background-image: url(Picture1blurred2.png);"></div>
+                <div class="background"
+                    style="background-image: url(images/chad-madden-bTfza0M0hCE-unsplash\ \(1\).jpg);"></div>
                 <div class="filter"></div>
                 <div class="mainTitle">
-                <h1>Learning Anatomy with Tangible AR</h1>
+                    <h1>Patient Self-Management Platform for Axial Spondyloarthritis (axSpA)</h1>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
+
+        <section id="project-page-description">
             <div class="subheader">
-                    <div class="subsection">
-                        <h2>Research</h2>
-                        <div class="underline">
-                            <hr>
-                        </div>
+                <div class="subsection">
+                    <h2>Project Partners</h2>
+                    <div class="underline">
+                        <hr>
                     </div>
-                    <div class="container">
-                    <div class="paper-grid">
-                        <div class="overview">
-                            <h1></h1>
-                        </div>
-            </div>
+                </div>
+                <section id="partners">
+                    <div class="partner-logos">
+                        <img src="images/LEAP Logo Square.png" alt="" class="partner" style="height: 100px;">
+                        <img src="images/Bristol.png" alt="" class="partner">
+                        <img src="images/Picture6.jpg" alt="" class="partner">
+                        <img src="images/UCB.jpg" alt="" class="partner">
+                        <img src="images/inhealthcare.png" alt="" class="partner"
+                            style="padding-top: 20px; padding-bottom: 20px;">
+                        <img src="images/BIRD.jpg" alt="" class="partner" style="height: 120px;">
+
+                    </div>
+                </section>
         </section>
+
+
+        <div id="imageViewerOverlay" class="image-viewer-overlay">
+            <img id="viewerImage" class="image-viewer-content" src="">
+            <a class="prev-btn" title="Previous Image">&#10094;</a>
+            <a class="next-btn" title="Next Image">&#10095;</a>
+            <span class="close-btn">&times;</span>
+
+        </div>
 
     </main>
     <footer class="main-footer">
@@ -74,4 +95,5 @@
 
     <button id="scrollTopBtn" title="Go to top">&uarr;</button>
 </body>
+
 </html>
