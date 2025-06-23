@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matt Wragg</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/projectPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/MW4icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,200;1,200&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <script src="js/index.js"></script>
+    <script src="js/projectPage.js"></script>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html"><img src="./images/MW4.png" href="#hero" class="logo"></a>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Research</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="background" style="background-image: url(./images/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg);"></div>
+                <div class="filter"></div>
+                <div class="mainTitle">
+                    <h1>Explainable AI for Clinical Decision Support Systems in Intensive Care</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="paper">
+            <div class="subheader">
+                <div class="subsection">
+                    <h2>Paper</h2>
+                    <div class="underline">
+                        <hr>
+                    </div>
+                </div>
+                <div class="container" id="paper-container">
+                    <div class="paper-grid">
+                        <div class="overview">
+                            <h2>Exploring the Requirements of Clinicians for Explainable AI Decision Support Systems in Intensive Care</h2>
+                            <b>Jeffrey N. Clark</b>, University of Bristol, (UoB)<br>
+                            <b>Matthew Wragg</b>, University of Bristol<br>
+                            <b>Emily Nielsen</b>, University of Bristol<br>
+                            <b>Miquel Perello-Nieto</b>, University of Bristol<br>
+                            <b>Nawid Keshtmand</b>, University of Bristol<br>
+                            <b>Michael Ambler</b>, UoB and University Hospitals Bristol and Weston NHS Foundation Trust<br>
+                            <b>Shiv Sharma</b>, University Hospitals Bristol and Weston NHS Foundation Trust<br>
+                            <b>Christopher P</b>. Bourdeaux, University Hospitals Bristol and Weston NHS Foundation Trust<br>
+                            <b>Amberly Brigden</b>, University of Bristol<br>
+                            <b>Raul Santos-Rodriguez</b>, University of Bristol<br><br>
+                            <p style="width: 75%"><i>Presented at CHI 2025: Proceedings of the 2025 CHI Conference on
+                                    Human Factors in Computing Systems</i></p>
+                            <div class="buttons">
+                                <div class="button-div">
+                                    <a href="https://arxiv.org/pdf/2411.11774"><button class="pdfButton">PDF</button></a>
+                                </div>
+                                <div class="button-div">
+                                    <a href="https://arxiv.org/abs/2411.11774"></a><button class="pdfButton">DOI</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="abstract">
+                            <h3><b>Abstract</b></h3>
+                            There is a growing need to understand how digital systems can support clinical decision-making,
+                            particularly as artificial intelligence (AI) models become increasingly complex and less human
+                            interpretable. This complexity raises concerns about trustworthiness, impacting safe and effective
+                            adoption of such technologies. Improved understanding of decision-making processes and requirements
+                            for explanations coming from decision support tools is a vital component in providing effective
+                            explainable solutions. This is particularly relevantin the data-intensive, fast-paced environments
+                            of intensive care units (ICUs). To explore these issues, group interviews were conducted with seven
+                            ICU clinicians, representing various roles and experience levels. Thematic analysis revealed three
+                            core themes: (T1) ICU decision-making relies on a wide range of factors, (T2) the complexity of
+                            patient state is challenging for shared decision-making, and (T3) requirements and capabilities of
+                            AI decision support systems. We include design recommendations from clinical input, providing
+                            insights to inform future AI systems for intensive care.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <img src="./images/MW4.png" href="#hero" class="logo">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/matthew-wragg-hci/" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://bsky.app/profile/mattwragg.bsky.social" aria-label="Bluesky Profile">Bluesky</a>
+                <a href="https://orcid.org/0000-0002-1343-1454" aria-label="ORCID Profile">ORCID</a>
+            </div>
+            <p><br>&copy; 2025 Matthew Wragg.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top">&uarr;</button>
+</body>
+
+</html>

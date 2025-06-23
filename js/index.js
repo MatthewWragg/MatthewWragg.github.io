@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    // --- Mobile Menu Toggle ---
     const menuToggle = document.getElementById('menuToggle');
     const mainNav = document.getElementById('mainNav');
     const navLinks = mainNav.querySelectorAll('a');
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         menuToggle.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (mainNav.classList.contains('active')) {
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // --- Active Nav Link Highlighting on Scroll ---
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('.main-nav ul li a');
 
@@ -29,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (scrollY >= sectionTop - 100) { // 100px offset
+            if (scrollY >= sectionTop - 100) {
                 current = section.getAttribute('id');
             }
         });
@@ -42,26 +39,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // --- Fade-in sections on scroll ---
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Optional: stop observing once visible
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1 // Trigger when 10% of the element is visible
+        threshold: 0.1
     });
 
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // --- Scroll to Top Button ---
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) { // Show button after scrolling 300px
+        if (window.scrollY > 300) {
             scrollTopBtn.classList.add('visible');
         } else {
             scrollTopBtn.classList.remove('visible');

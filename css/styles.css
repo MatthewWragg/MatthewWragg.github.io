@@ -88,7 +88,7 @@ section.visible {
     transform: translateY(0);
 }
 
-/* --- Header & Navigation --- */
+
 .main-header {
     position: fixed;
     top: 0;
@@ -161,40 +161,39 @@ section.visible {
     transition: all var(--transition-speed) ease-in-out;
 }
 
-/* --- Hero Section --- */
 #hero {
     display: flex;
     align-items: center;
-    /* Vertically centers the container within #hero */
+   
     justify-content: center;
-    /* Horizontally centers the container within #hero */
+   
     text-align: left;
-    /* Default text alignment for children */
+   
 
-    /* Use padding-top to push hero content below the fixed header */
+   
     padding-top: 100px;
 
     box-sizing: border-box;
-    /* Include padding in element's total width and height */
+   
     height: auto;
-    /* Allow height to adjust dynamically based on content */
+   
     min-height: calc(60vh - 100px);
-    /* Ensure #hero section fills viewport height below header */
+   
 
     position: relative;
-    /* Context for absolute background/filter */
+   
     overflow: hidden;
-    /* Important for background to not spill out */
+   
 }
 
 .background {
     position: absolute;
     top: 0;
-    /* Start position relative to #hero, accounting for its padding-top */
+   
     left: 0;
     width: 100%;
     bottom: 100px;
-    /* End position relative to #hero, accounting for its padding-bottom */
+   
     height: 100%;
     background-size: cover;
     background-position: center center;
@@ -206,12 +205,12 @@ section.visible {
 .filter {
     position: absolute;
     top: 0;
-    /* Start position relative to #hero, accounting for its padding-top */
+   
     left: 0;
     width: 100%;
     height: 100%;
     bottom: 50px;
-    /* End position relative to #hero, accounting for its padding-bottom */
+   
     background-color: rgba(65, 65, 65, 0.74);
     pointer-events: none;
     max-height: 100%;
@@ -222,47 +221,47 @@ section.visible {
 #hero .container {
     display: flex;
     max-width: 80%;
-    /* Increased max-width for better use of space */
+   
     width: 100%;
-    /* Ensure it takes full width within max-width */
+   
     min-height: calc(60vh - 100px - 100px);
-    /* Adjust min-height to account for #hero's padding-top (100px) and padding-bottom (100px), plus the 100px header height from viewport calculation */
+   
     padding: 0 20px;
-    /* Consistent horizontal padding, internal padding of container */
+   
     margin: 0 auto;
-    /* Center the container horizontally within #hero */
+   
     justify-content: center;
-    /* Center horizontally */
+   
     align-items: center;
-    /* Vertically align items */
+   
     gap: 30px;
-    /* Space between text and image */
+   
     z-index: 1;
-    /* Ensure content is above background/filter */
+   
 }
 
 #hero h1 {
     font-size: 2.8rem;
-    /* Adjusted for larger screens */
+   
     color: var(--primary-color);
     line-height: 1.4;
     width: 100%;
-    /* Take full width within its flex item */
+   
     text-align: left;
-    /* Default text alignment */
+   
 
 }
 
 #hero .subtitle {
     font-size: 1.8rem;
-    /* Adjusted for larger screens */
+   
     color: var(--primary-color);
     font-weight: 500;
     line-height: 1.4;
     width: 100%;
-    /* Take full width within its flex item */
+   
     text-align: left;
-    /* Default text alignment */
+   
 
 }
 
@@ -270,10 +269,10 @@ section.visible {
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* Allows the text section to grow/shrink */
+   
     justify-content: center;
     min-width: 0;
-    /* Ensures content can shrink */
+   
 }
 
 #hero .profilePhoto {
@@ -282,9 +281,9 @@ section.visible {
     height: 30%;
     width: 30%;
     max-width: 250px;
-    /* Adjusted max-width for better control */
+   
     object-fit: cover;
-    /* Ensures image covers the area without distortion */
+   
 }
 
 
@@ -333,7 +332,6 @@ section.visible {
     font-weight: 500;
 }
 
-/* --- Projects Section --- */
 #projects {
     background-color: var(--primary-color);
     padding-top: 5rem;
@@ -379,11 +377,11 @@ section.visible {
 .project-info {
     padding: 1.5rem;
     display: flex;
-    /* Make project-info a flex container */
+   
     flex-direction: column;
-    /* Stack its children vertically */
+   
     flex-grow: 1;
-    /* Allow project-info to take up all available vertical space */
+   
 
 }
 
@@ -396,11 +394,11 @@ section.visible {
 
 .project-info p {
     font-size: clamp(0.85rem, 1.5vw, 1rem);
-    /* Min 0.85rem, scales with 1.5% of viewport width, Max 1rem */
+   
     flex-grow: 1;
-    /* Allow p to grow and push project-links down */
+   
     margin-bottom: 1rem;
-    /* Add some margin below paragraph */
+   
 }
 
 .project-links a {
@@ -409,7 +407,7 @@ section.visible {
     align-self: flex-end;
 }
 
-/* --- Contact Section --- */
+
 #contact .container {
     max-width: 700px;
     text-align: center;
@@ -472,7 +470,7 @@ textarea {
     background-color: #2980b9;
 }
 
-/* --- Footer --- */
+
 .main-footer {
     background-color: var(--primary-color);
     text-align: center;
@@ -497,20 +495,20 @@ textarea {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: var(--accent-color); /* Use accent color */
-    color: var(--primary-color); /* White text/arrow for contrast */
+    background-color: var(--accent-color);
+    color: var(--primary-color);
     border: none;
-    border-radius: 50%; /* Perfectly round */
-    width: 55px; /* Slightly larger */
-    height: 55px; /* Slightly larger */
-    font-size: 28px; /* Larger arrow icon */
-    line-height: 0.1em; /* Center arrow vertically */
-    text-align: center; /* Center arrow horizontally */
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+    line-height: 0.1em;
+    text-align: center;
     cursor: pointer;
     display: none;
     opacity: 0;
     transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease, background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer, more prominent shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #scrollTopBtn.visible {
@@ -523,7 +521,7 @@ textarea {
     transform: scale(1.1);
 }
 
-/* --- Responsive Design --- */
+
 
 @media (max-width: 1024px) {
     #hero h1 {
@@ -538,47 +536,47 @@ textarea {
 @media (max-width: 768px) {
     #hero .container {
         flex-direction: column;
-        /* Stack elements vertically */
+       
         text-align: center;
-        /* Center text elements */
+       
         max-width: 80%;
-        /* Increase max-width to use more space */
+       
         padding: 20px;
-        /* Add more padding */
+       
         height: auto;
-        /* Allow container height to adjust */
+       
         gap: 0px;
     }
 
     #hero .mainTitle {
         width: 100%;
-        /* Take full width */
+       
 
     }
 
     #hero h1 {
         font-size: 2rem;
         text-align: center;
-        /* Center align title */
+       
     }
 
     #hero .subtitle {
         font-size: 1.1rem;
         text-align: center;
-        /* Center align subtitle */
+       
         margin-bottom: 1rem;
-        /* Reduce bottom margin */
+       
     }
 
     #hero .profilePhoto {
         width: 150px;
-        /* Further reduce size */
+       
         height: 150px;
         margin: 0 auto;
-        /* Center the image */
+       
     }
 
-    /* Existing mobile nav styles */
+   
     .main-header .container {
         flex-direction: column;
         align-items: flex-start;
@@ -595,75 +593,75 @@ textarea {
 
     .main-nav {
         width: 100%;
-        /* Take full width */
+       
         margin-top: 0;
-        /* Changed from 1rem to 0 */
+       
         display: none;
-        /* Hide by default on mobile */
+       
         position: absolute;
-        /* Position menu relative to header */
+       
         top: 100px;
-        /* Below the header */
+       
         left: 0;
         background-color: var(--primary-color);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         border-radius: 0 0 10px 10px;
         padding: 10px 0;
-        /* Vertical padding for the menu block */
+       
         z-index: 999;
-        /* Ensure it's above other content but below header */
-        /* Added transition for smoother open/close */
+       
+       
         transform: translateY(-100%);
         transition: transform 0.3s ease-out;
     }
 
     .main-nav.active {
         display: block;
-        /* Show when active */
+       
         transform: translateY(0%);
-        /* Slide down */
+       
     }
 
     .main-nav ul {
         flex-direction: column;
         width: 100%;
         padding: 0;
-        /* Remove default padding for ul */
+       
     }
 
     .main-nav ul li {
         margin: 0;
-        /* Remove horizontal margin */
+       
         padding: 10px 0;
-        /* Consistent padding for list items */
+       
         text-align: center;
         border-bottom: 1px solid var(--secondary-color);
-        /* Separator */
+       
     }
 
     .main-nav ul li:last-child {
         border-bottom: none;
-        /* No border on last item */
+       
     }
 
     .main-nav ul li a {
         display: block;
-        /* Make the whole list item clickable */
+       
         padding: 10px 20px;
-        /* Padding for the clickable area */
+       
         color: var(--header-color);
         font-size: 1.1rem;
-        /* Slightly larger font for mobile links */
+       
     }
 
     .main-nav ul li a::after {
         content: none;
-        /* Remove underline animation on mobile */
+       
     }
 
     .main-nav ul li a.active {
         color: var(--accent-color);
-        /* Highlight active link */
+       
         font-weight: bold;
     }
 
