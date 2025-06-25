@@ -68,9 +68,10 @@
     color: var(--primary-color);
     font-weight: 500;
     line-height: 1.4;
-    width: 100%;
+    width: 100%; /* Take full width within its flex item */
+    max-width: 1140px;
     padding-right: 10px;
-    text-align: left;
+    text-align: left; /* Default text alignment */
 }
 
 #hero .mainTitle {
@@ -79,6 +80,9 @@
     flex: 1;
     justify-content: center;
     min-width: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 }
 
 #hero .aboutPhoto {
@@ -106,9 +110,6 @@
     }
     #hero .subtitle {
         font-size: 1.1rem;
-    }
-    #hero .aboutPhotoDiv {
-        width: 250px;
     }
     #hero .aboutPhoto {
         max-width: 250px;
