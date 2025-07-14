@@ -9,7 +9,7 @@
     
     box-sizing: border-box;
     height: auto;
-    min-height: calc(80vh - 100px);
+    min-height: calc(40vh - 100px);
     
     position: relative;
     overflow: hidden;
@@ -203,23 +203,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     width: 90%;
-    margin: 0 auto;
     margin-top: 3rem;
+    place-self: center;
 }
 
 .grid-item {
     background-color: var(--primary-color);
     border-radius: 10px;
     display: flex;
-    padding: 20px;
-    align-items: center;
+    place-items: center;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .grid-item .logo-section {
@@ -273,11 +267,44 @@
     margin-bottom: 20px;
 }
 
+#imi {
+    width: 40%;
+    margin-left: 35%;
+}
+
 @media (max-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+@media (min-width: 480px) {
+    .subtitle-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero .mainTitle {
+        margin-top: 0px;
+    }
+    #grid-section { 
+        padding: 2rem 60px;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    .subtitle-mobile {
+        display: block;
+    }
+
+    .subheader {
+        padding-top: 30px;
+    }
+}
+
 
 @media (max-width: 480px) {
     #hero h1 {
@@ -286,6 +313,7 @@
     #hero .subtitle {
         font-size: 0.85rem;
     }
+    
     #hero .aboutPhotoDiv {
         width: 150px;
         height: 150px;
@@ -293,6 +321,9 @@
     #hero .aboutPhoto {
         max-width: 150px;
         height: 150px;
+    }
+    #grid-section { 
+        padding: 2rem 20px;
     }
 
     .grid-item {
@@ -303,11 +334,22 @@
         width: 100%;
         margin-right: 0;
         margin-bottom: 15px;
+        flex-shrink: unset;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10%, 50%));
+        place-items: center;
+        place-content: center;
+
+    }
+    .grid-item .logo {
+        margin-bottom: 1em;
     }
     .grid-item .text-content {
         width: 100%;
+        text-align: center;
     }
-    .grid-item .logo-placeholder {
-        margin: 0 auto;
-    }
+    #imi {
+    width: 35%;
+    margin-left: 0%;
+}
 }
