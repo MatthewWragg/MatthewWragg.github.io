@@ -233,7 +233,7 @@
 
 #grid-section {
     background-color: var(--primary-color);
-    padding: 5rem 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -339,7 +339,7 @@
         height: 150px;
     }
     #grid-section { 
-        padding: 2rem 20px;
+        padding: 3rem 20px;
     }
 
     .grid-item {

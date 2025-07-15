@@ -329,6 +329,10 @@ section.visible {
     font-weight: 500;
 }
 
+#grid-section {
+    padding-top: 20px;
+}
+
 #projects {
     background-color: var(--primary-color);
     padding-top: 0px;
