@@ -30,13 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 current = section.getAttribute('id');
             }
         });
-
-        navLi.forEach(a => {
-            a.classList.remove('active');
-            if (a.getAttribute('href').substring(1) === current) {
-                a.classList.add('active');
-            }
-        });
     });
 
     const observer = new IntersectionObserver((entries) => {
