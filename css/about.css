@@ -55,7 +55,7 @@
 }
 
 #hero h1 {
-    font-size: 3.5vw;
+    font-size: clamp(1.6rem, 4vw, 4rem);
     color: var(--primary-color);
     line-height: 1.4;
     width: 100%;
@@ -63,7 +63,7 @@
 }
 
 #hero h2 {
-    font-size: 2.2vw;
+    font-size: clamp(1.2rem, 2vw, 2rem);
     color: var(--primary-color);
     line-height: 1.4;
     width: 100%;
@@ -135,15 +135,12 @@
     }
 
     #hero h1 {
-        font-size: 1.62rem;
         text-align: center;
     }
     #hero h2 {
-        font-size: 1rem;
         text-align: center;
         margin-bottom: 1rem;
         padding-right: 0px;
-
     }
 
     #hero .aboutPhoto {
@@ -238,7 +235,8 @@
 }
 
 #grid-section .subsection {
-    margin-bottom: 3rem;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
 }
 
 .grid-container {
@@ -323,13 +321,6 @@
 
 
 @media (max-width: 480px) {
-    #hero h1 {
-        font-size: 1.62rem;
-    }
-    #hero .subtitle {
-        font-size: 0.85rem;
-    }
-    
     #hero .aboutPhotoDiv {
         width: 150px;
         height: 150px;
