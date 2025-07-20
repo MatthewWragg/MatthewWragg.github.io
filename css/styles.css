@@ -331,6 +331,7 @@ section.visible {
 
 #grid-section {
     padding-top: 20px;
+    place-self: center;
 }
 
 #projects {
