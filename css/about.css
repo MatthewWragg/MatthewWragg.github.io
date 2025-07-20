@@ -315,6 +315,9 @@
 @media (max-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(0%, 100%));
+        margin: 0px;
+        padding: 0px;
+        place-items: center;
     }
 }
 
