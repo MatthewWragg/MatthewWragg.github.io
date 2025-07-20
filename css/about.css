@@ -243,8 +243,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     width: 90%;
-    margin-top: 3rem;
-    place-self: center;
+    margin: 3rem auto;
 }
 
 .grid-item {
@@ -315,9 +314,7 @@
 @media (max-width: 1024px) {
     .grid-container {
         grid-template-columns: repeat(auto-fit, minmax(0%, 100%));
-        margin: 0px;
-        padding: 0px;
-        place-items: center;
+        margin: 3rem auto;
     }
 }
 
