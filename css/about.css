@@ -335,11 +335,10 @@
     }
     .grid-item .logo-section {
         width: 100%;
-        margin-right: 0;
         margin-bottom: 15px;
         flex-shrink: unset;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10%, 50%));
+        grid-template-columns: repeat(auto-fit, minmax(0%, 50%));
         place-items: center;
         place-content: center;
 
