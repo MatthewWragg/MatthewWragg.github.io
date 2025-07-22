@@ -88,7 +88,6 @@ section.visible {
     transform: translateY(0);
 }
 
-
 .main-header {
     position: fixed;
     top: 0;
@@ -164,36 +163,22 @@ section.visible {
 #hero {
     display: flex;
     align-items: center;
-
     justify-content: center;
-
     text-align: left;
-
-
-
     padding-top: 100px;
-
     box-sizing: border-box;
-
     height: auto;
-
     min-height: calc(60vh - 100px);
-
-
     position: relative;
-
     overflow: hidden;
-
 }
 
 .background {
     position: absolute;
     top: 0;
-
     left: 0;
     width: 100%;
     bottom: 100px;
-
     height: 100%;
     background-size: cover;
     background-position: center center;
@@ -205,12 +190,10 @@ section.visible {
 .filter {
     position: absolute;
     top: 0;
-
     left: 0;
     width: 100%;
     height: 100%;
     bottom: 50px;
-
     background-color: rgba(65, 65, 65, 0.74);
     pointer-events: none;
     max-height: 100%;
@@ -221,23 +204,14 @@ section.visible {
 #hero .container {
     display: flex;
     max-width: 50%;
-
     width: 100%;
-
     min-height: calc(60vh - 100px - 100px);
-
     padding: 0 20px;
-
     margin: 0 auto;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 30px;
-
     z-index: 1;
-
 }
 
 #hero h1 {
@@ -250,25 +224,19 @@ section.visible {
 
 #hero .subtitle {
     font-size: 1.8rem;
-
     color: var(--primary-color);
     font-weight: 500;
     line-height: 1.4;
     width: 100%;
-
     text-align: left;
-
-
 }
 
 #hero .mainTitle {
     display: flex;
     flex-direction: column;
     flex: 1;
-
     justify-content: center;
     min-width: 0;
-
 }
 
 #hero .profilePhoto {
@@ -280,10 +248,7 @@ section.visible {
     margin-top: 20px;
     margin-bottom: 20px;
     object-fit: cover;
-
 }
-
-
 
 .cta-button {
     display: inline-block;
@@ -379,28 +344,20 @@ section.visible {
 .project-info {
     padding: 1.5rem;
     display: flex;
-
     flex-direction: column;
-
     flex-grow: 1;
-
-
 }
 
 .project-info h3 {
     color: var(--accent-color);
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     font-weight: 500;
-
 }
 
 .project-info p {
     font-size: clamp(0.85rem, 1.5vw, 1rem);
-
     flex-grow: 1;
-
     margin-bottom: 1rem;
-
 }
 
 .project-links a {
@@ -408,7 +365,6 @@ section.visible {
     font-weight: bold;
     align-self: flex-end;
 }
-
 
 #contact .container {
     max-width: 700px;
@@ -472,7 +428,6 @@ textarea {
     background-color: #2980b9;
 }
 
-
 .main-footer {
     background-color: var(--primary-color);
     text-align: center;
@@ -491,7 +446,6 @@ textarea {
     text-decoration-line: underline;
     text-underline-offset: 6px;
 }
-
 
 #scrollTopBtn {
     position: fixed;
@@ -523,8 +477,6 @@ textarea {
     transform: scale(1.1);
 }
 
-
-
 @media (max-width: 1024px) {
     #hero h1 {
         font-size: 2.5rem;
@@ -533,140 +485,105 @@ textarea {
     #hero .subtitle {
         font-size: 1.4rem;
     }
+
 }
 
 @media (max-width: 768px) {
     #hero .container {
         flex-direction: column;
-
         text-align: center;
-
         max-width: 80%;
-
         padding: 20px;
-
         height: auto;
-
         gap: 0px;
     }
 
     #hero .mainTitle {
         width: 100%;
-
-
     }
 
     #hero h1 {
         font-size: 2rem;
         text-align: center;
-
     }
 
     #hero .subtitle {
         font-size: 1.1rem;
         text-align: center;
-
         margin-bottom: 1rem;
-
     }
 
     #hero .profilePhoto {
         width: 150px;
-
         height: 150px;
         margin: 0 auto;
-
-    }
-
-
-    .main-header .container {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
-
     }
 
     .main-header .container {
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
+    }
 
+    .main-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
     .main-nav {
         width: 100%;
-
         margin-top: 0;
-
         display: none;
-
         position: absolute;
-
         top: 100px;
-
         left: 0;
         background-color: var(--primary-color);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         border-radius: 0 0 10px 10px;
         padding: 10px 0;
-
         z-index: 999;
-
-
         transform: translateY(-100%);
         transition: transform 0.3s ease-out;
     }
 
     .main-nav.active {
         display: block;
-
         transform: translateY(0%);
-
     }
 
     .main-nav ul {
         flex-direction: column;
         width: 100%;
         padding: 0;
-
     }
 
     .main-nav ul li {
         margin: 0;
-
         padding: 10px 0;
-
         text-align: center;
         border-bottom: 1px solid var(--secondary-color);
-
     }
 
     .main-nav ul li:last-child {
         border-bottom: none;
-
     }
 
     .main-nav ul li a {
         display: block;
-
         padding: 10px 20px;
-
         color: var(--header-color);
         font-size: 1.1rem;
-
     }
 
     .main-nav ul li a::after {
         content: none;
-
     }
 
     .main-nav ul li a.active {
         color: var(--accent-color);
-
         font-weight: bold;
     }
-
 
     .menu-toggle {
         display: block;
@@ -686,4 +603,5 @@ textarea {
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
 }

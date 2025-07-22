@@ -340,7 +340,7 @@
     }
     .grid-item .logo-section {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         flex-shrink: unset;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(0%, 50%));
@@ -356,7 +356,12 @@
         text-align: center;
     }
     #imi {
-    width: 35%;
-    margin-left: 0%;
-}
+        width: 35%;
+        margin-left: 0%;
+    }
+    #item3 {
+        grid-column: 1 / span 2; /* Start at column 1 and span 2 columns */
+        justify-self: center; /* Center the item horizontally within its grid area */
+        width: 50%;
+    }
 }

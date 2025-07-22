@@ -119,6 +119,10 @@ h2 {
     grid-auto-flow: dense;
 }
 
+.overview p {
+    width: 75%;
+}
+
 
 @media (max-width: 1024px) {   
     .gallery-grid {
@@ -300,6 +304,7 @@ h2 {
         max-width: 95%;
        
     }
+
 }
 
 @media (max-width: 480px) {
@@ -325,5 +330,28 @@ h2 {
         top: 5px;
         right: 10px;
        
+    }
+
+    .abstract {
+        text-align: center;
+        padding-right: 10px;
+    }
+
+    .overview {
+        text-align: center;
+        padding: 0px;
+    }
+
+    .overview p {
+        width: 100%;
+    }
+
+    #paper-container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .buttons {
+        place-content: center;
     }
 }
