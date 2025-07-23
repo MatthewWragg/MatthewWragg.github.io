@@ -43,6 +43,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    let touchStartX = 0;
+    let touchEndX=0;
+
+    imageViewerOverlay.addEventListener('touchstart', (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    });
+
+     imageViewerOverlay.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].screenX;
+        if (touchEndX < touchStartX && touchStartX - touchEndX > 20) {
+            navigateImages(1);
+        }
+        if (touchEndX > touchStartX && touchEndX - touchStartX > 20) {
+            navigateImages(-1);
+        }
+    });
+
+
     closeBtn.addEventListener('click', closeImageViewer);
 
     prevBtn.addEventListener('click', (event) => {

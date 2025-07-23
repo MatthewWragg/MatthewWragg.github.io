@@ -109,15 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
         metaInfoP.textContent = `Published on ${formattedDate}`;
         postHeader.appendChild(metaInfoP);
 
+        const categoryButton = document.createElement('button');
+        categoryButton.className = 'category-button';
+        categoryButton.textContent = post.category;
+        categoryButton.id = post.category;
+        categoryButton.dataset.category = post.category;
+        postHeader.appendChild(categoryButton);
+
         const titleH1 = document.createElement('h1');
         titleH1.textContent = post.title;
         postHeader.appendChild(titleH1);
 
-        const categoryButton = document.createElement('button');
-        categoryButton.className = 'category-button';
-        categoryButton.textContent = post.category;
-        categoryButton.dataset.category = post.category;
-        postHeader.appendChild(categoryButton);
+        const line = document.createElement('hr');
+        line.className = 'post-divider';
+        postHeader.appendChild(line);
 
         categoryButton.addEventListener('click', (event) => {
             event.stopPropagation();

@@ -6,6 +6,8 @@
     --dark-color: #212121;
     --text-color: #2c3e50;
     --button-color: #444444;
+    --axspa-theme-color: #137400;
+    --general-theme-color: var(--accent-color);
     --font-family: 'Manrope', sans-serif;
     --transition-speed: 0.3s;
     letter-spacing: -0.5px;
@@ -73,10 +75,6 @@ a {
     text-decoration: none;
     color: var(--accent-color);
     transition: color var(--transition-speed) ease;
-}
-
-a:hover {
-    color: #5dade2;
 }
 
 section {
