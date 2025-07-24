@@ -15,7 +15,7 @@ const postsData = [
     title: "Patient Engagement Event and Research Updates",
     date: "2025-07-17T15:00:00Z",
     category: "axSpA",
-    excerpt: "Hello! After a long time in the making, I am delighted to introduce my new blog! I hope to share research findings, personal updates, events, and lots of other research-related things. One of my main goals with this blog is to help make research as accessible and inclusive as possible, particularly by sharing the outputs and impacts of our research, and by supporting patient and public involvement and engagement throughout every stage of research",
+    excerpt: "Hi everyone, I thought I would share some exciting updates from my axSpA research project over the last couple of weeks. Hope you enjoy!",
     content: `<p>Hi everyone,<br><br>
     I thought I would share some exciting updates from my axSpA research project over the last couple of weeks. Hope you enjoy!<br>
 
