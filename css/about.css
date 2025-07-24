@@ -35,7 +35,7 @@
     width: 100%;
     height: 100%;
     bottom: 50px;
-    background-color: rgba(51, 51, 51, 0.815);
+    background-color: rgba(51, 51, 51, 0.8);
     pointer-events: none;
     max-height: 100%;;
     z-index: -1;
