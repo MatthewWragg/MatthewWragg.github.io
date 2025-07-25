@@ -370,7 +370,9 @@ h2 {
     }
 
     #background{
-        width: 90%;
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     #partners {
