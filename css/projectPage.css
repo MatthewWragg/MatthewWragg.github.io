@@ -33,9 +33,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, 200px);
     gap: 2rem;
     place-items: center;
-    place-self: center;
     place-content: center;
-    width: 90%;
 }
 
 .partner {
@@ -128,8 +126,9 @@ h2 {
 #background {
     width: 60%;
     place-self: center;
+    place-content: center;
+    place-items: center;
     margin-bottom: 50px;
-
 }
 
 
@@ -362,7 +361,7 @@ h2 {
     .partner-logos {
         margin-bottom: 20px;
         grid-template-columns: repeat(2, minmax(10%, 45%));
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .partner {
@@ -372,5 +371,11 @@ h2 {
 
     #background{
         width: 90%;
+    }
+
+    #partners {
+        place-self: center;
+        place-content: center;
+        place-items: center;
     }
 }
