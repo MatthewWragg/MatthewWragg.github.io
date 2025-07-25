@@ -31,14 +31,16 @@ h2 {
 .partner-logos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
     place-items: center;
     place-self: center;
-    max-width: 80%;
+    place-content: center;
+    width: 90%;
 }
 
 .partner {
     max-width: 200px;
+    max-height: 100px;
     background-color: var(--primary-color);
     display: flex;
     place-items: center;
@@ -121,6 +123,13 @@ h2 {
 
 .overview p {
     width: 75%;
+}
+
+#background {
+    width: 60%;
+    place-self: center;
+    margin-bottom: 50px;
+
 }
 
 
@@ -344,5 +353,22 @@ h2 {
 
     .buttons {
         place-content: center;
+    }
+
+    .partner-logos {
+        margin-bottom: 20px;
+        grid-template-columns: repeat(2, minmax(10%, 50%));
+        gap: 1rem;
+    }
+
+    .partner {
+        max-width: 130px;
+        max-height: 75px;
+    }
+    
+    #background{
+        width: 90%;
+        text-align: center;
+        margin-bottom: 30px;
     }
 }
