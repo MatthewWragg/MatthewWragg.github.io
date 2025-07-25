@@ -25,7 +25,7 @@ const postsData = [
 
     <p>We started the day with an insightful panel discussion with two people living with axSpA, who talked about their diagnosis journeys, self-management practices, and how axSpA has affected their lives. We then presented the current research projects happening at the university, and invited attendees to take part in a series of workshops run by the researchers. I had the pleasure of running two of these workshops based on my fellowship research, looking at what information people record about their health outside of the clinic, and how this could be used during appointments to help guide shared decision-making and personalised care.</p>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(10%, 49%)); gap: 1rem; margin-bottom: 40px; margin-top: 40px;">
+    <div class="blog-grid">
       <img src="./images/patientday1.jpg" style="margin: 0px;">
       <img src="./images/patientday2.jpg" style="margin: 0px;">
       <img src="./images/patientday3.jpg" style="margin: 0px;">

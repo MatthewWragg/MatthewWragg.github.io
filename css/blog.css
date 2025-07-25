@@ -319,6 +319,14 @@
     margin-top: 2rem;
 }
 
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10%, 50%));
+    gap: 1rem;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
 @media (max-width: 480px) {
     .post-content-area h1 {
         font-size: 1.5rem;
@@ -331,6 +339,13 @@
     }
     .post-body h3 {
         font-size: 1.2rem;
+    }
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(10%, 100%));
+        gap: 1rem;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 }
 
