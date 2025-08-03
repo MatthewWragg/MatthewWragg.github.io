@@ -101,7 +101,8 @@
     max-width: 300px;
     max-height: 90%;
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 #hero .aboutPhotoDiv {
@@ -150,6 +151,8 @@
         max-width: none;
         max-height: none;
         margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     #about {
@@ -332,6 +335,8 @@
     #hero .aboutPhoto {
         max-width: 150px;
         height: 150px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .grid-item {
