@@ -45,4 +45,22 @@ const postsData = [
     <p>Another huge thank you to the BIRD patient panel who provided lots of insightful feedback on our study plans and documents. Being a part of a research panel is a great way to get involved in research without having to participate in studies, and helps us to design more accessible, inclusive, and meaningful research. If you would like to know more about participating in the BIRD patient panel, please get in touch with Mel at <a href="mailto:ppe@birdbath.org.uk">ppe@birdbath.org.uk</a>.</p>
     `
   },
+
+  {
+    id: "2",
+    title: "Community Innovator Scheme",
+    date: "2025-09-11T15:30:00Z",
+    category: "General",
+    excerpt: "Exciting news from LEAP today - we have just announced our Community Innovator Scheme!",
+    content: `<p>Hi everyone, I'm really excited to share that LEAP have just announced the launch of the <a href="https://leap-hub.ac.uk/leap-digital-health-community-innovators/">Digital Health Community Innovator Scheme!</a><br><br>
+
+    Is there a health challenge that you have experienced or that you see in your community that you think could be solved using digital technology? If so, we want to work with you to help you turn your ideas and insights into impactful digital health research. The community innovator scheme is designed for people with real-world experience of health and care in the community, who want to make a difference and explore digital ways to improve lives. You don't need research or technical skills, just a problem or opportunity you care about and a passion for making things better.<br><br>
+
+    If you have any questions, there's lots more info on the <a href="https://leap-hub.ac.uk/leap-digital-health-community-innovators/">LEAP website</a> and there will be two online information sessions on <a href="https://www.tickettailor.com/events/leapdigitalhealthhub/1828015"> Tuesday 16th</a> and <a href="https://www.tickettailor.com/events/leapdigitalhealthhub/1828257"> Friday 19th</a> September 2025. You can also contact LEAP at <a href="mailto:leap-dh-hub@bristol.ac.uk">leap-dh-hub@bristol.ac.uk</a>.
+
+
+    `
+  },
+
+
 ];
