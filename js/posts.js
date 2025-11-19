@@ -63,4 +63,31 @@ const postsData = [
   },
 
 
+  {
+    id: "3",
+    title: "Updates from the Community Innovator Sandpit",
+    date: "2025-011-19T17:30:00Z",
+    category: "General",
+    excerpt: "Last Friday, we held the LEAP Community Sandpit at the fantastic Trinity Community Arts Centre in Bristol.",
+    content: `<p>Winter is most definitely upon us! Hope you're all keeping well.<br>
+
+    Last Friday, we held the LEAP Community Sandpit at the fantastic Trinity Community Arts Centre in Bristol.
+
+    Despite the torrential rain, we were joined by an incredible group of attendees and 9 passionate Community Innovators who shared their challenges and bold ideas. Each Innovator had just 5 minutes to pitch their challenge, refined in collaboration with LEAP researchers to highlight opportunities for impact.
+
+    After the presentations, attendees worked together at challenge tables, brainstorming solutions and scoping projects with a view to applying for £10,000 seedcorn funding for a research and innovation project.
+
+    The energy, creativity, and bravery in the room were truly impressive. Thank you to everyone who contributed ideas, brought their own lived experience, and embraced the spirit of innovation.
+
+    On a personal note, I'm so proud to be a part of our community innovator scheme. It's amazing to see so many members of the community get involved in research and share their lived experiences. I'm so exicted to work with them on shaping these projects.
+
+    Huge thanks to all who made this happen, and to everyone who braved the weather to be part of it!
+
+    <div class="blog-grid">
+      <img src="./images/community1.jpg" style="margin: 0px;">
+      <img src="./images/community2.jpg" style="margin: 0px;">
+    </div>
+    `
+  },
+
 ];
