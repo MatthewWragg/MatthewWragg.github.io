@@ -66,7 +66,7 @@ const postsData = [
   {
     id: "3",
     title: "Updates from the Community Innovator Sandpit",
-    date: "2025-011-19T17:45:00Z",
+    date: "2025-11-19T17:45:00Z",
     category: "General",
     excerpt: "Last Friday, we held the LEAP Community Sandpit at the fantastic Trinity Community Arts Centre in Bristol.",
     content: `<p>Winter is most definitely upon us! Hope you're all keeping well.<br>
